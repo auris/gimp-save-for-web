@@ -1,0 +1,189 @@
+# translation of Save for Web
+#
+# Vicent Cubells i Peña <vicent@vcubells.net>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: Save for Web\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-03-16 19:45+0200\n"
+"PO-Revision-Date: 2009-05-23 06:42+0100\n"
+"Last-Translator: cubells <vicent@vcubells.net>\n"
+"Language-Team: Catalan <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/webx_crop_widget.c:93
+msgid "Crop"
+msgstr "Escapça"
+
+#: ../src/webx_crop_widget.c:107
+msgid "X Offset:"
+msgstr "Desplaçament H.: "
+
+#: ../src/webx_crop_widget.c:120
+msgid "Y Offset:"
+msgstr "Desplaçament V.:"
+
+#: ../src/webx_crop_widget.c:133
+#: ../src/webx_resize_widget.c:108
+msgid "Width:"
+msgstr "Amplada:"
+
+#: ../src/webx_crop_widget.c:146
+#: ../src/webx_resize_widget.c:120
+msgid "Height:"
+msgstr "Altura :"
+
+#: ../src/webx_dialog.c:155
+msgid "Save for Web"
+msgstr "Desa per al Web"
+
+#: ../src/webx_dialog.c:243
+#: ../src/webx_jpeg_target.c:173
+msgid "JPEG"
+msgstr "JPEG"
+
+#: ../src/webx_dialog.c:249
+msgid "JPEG 2000"
+msgstr "JPEG 2000"
+
+#: ../src/webx_dialog.c:255
+#: ../src/webx_png8_target.c:141
+msgid "PNG-8"
+msgstr "PNG-8"
+
+#: ../src/webx_dialog.c:261
+#: ../src/webx_png24_target.c:141
+msgid "PNG-24"
+msgstr "PNG-24"
+
+#: ../src/webx_dialog.c:267
+#: ../src/webx_gif_target.c:120
+msgid "GIF"
+msgstr "GIF"
+
+#: ../src/webx_dialog.c:368
+msgid "Save Image"
+msgstr "Desa la imatge"
+
+#: ../src/webx_dialog.c:398
+msgid "Failed to save the file!"
+msgstr "No s'ha pogut desar el fitxer!"
+
+#: ../src/webx_dialog.c:464
+msgid "File size: unknown"
+msgstr "Mida del fitxer: desconeguda"
+
+#: ../src/webx_dialog.c:509
+#, c-format
+msgid "File size: %02.01f kB"
+msgstr "Mida del fitxer: %02.01f kB"
+
+#: ../src/webx_gif_target.c:74
+#: ../src/webx_png24_target.c:88
+#: ../src/webx_png8_target.c:89
+msgid "_Interlace"
+msgstr "Entrellaçat (_i)"
+
+#.
+#. * reuse existing
+#.
+#: ../src/webx_indexed_target.c:81
+msgid "Reuse existing palette"
+msgstr "Reutilitza paleta existent"
+
+#: ../src/webx_indexed_target.c:98
+msgid "Generate optimum palette"
+msgstr "Genera paleta òptima"
+
+#: ../src/webx_indexed_target.c:110
+msgid "Number of colors:"
+msgstr "Nombre de colors:"
+
+#: ../src/webx_indexed_target.c:131
+msgid "Use web-optimized palette"
+msgstr "Utilitza paleta optimitzada per al web"
+
+#: ../src/webx_indexed_target.c:148
+msgid "Use black and white palette"
+msgstr "Utilitza paleta blanc i negra"
+
+#: ../src/webx_indexed_target.c:160
+msgid "Remove unused colors"
+msgstr "Suprimeix els colors no utilitzats"
+
+#: ../src/webx_indexed_target.c:176
+msgid "Dither:"
+msgstr "Trama:"
+
+#: ../src/webx_indexed_target.c:181
+msgid "None"
+msgstr "Cap"
+
+#: ../src/webx_indexed_target.c:183
+msgid "Floyd-Steinberg"
+msgstr "Floyd-Steinberg"
+
+#: ../src/webx_indexed_target.c:185
+msgid "Floyd-Steinberg 2"
+msgstr "Floyd-Steinberg 2"
+
+#: ../src/webx_indexed_target.c:187
+msgid "Positioned"
+msgstr "Posicionada"
+
+#: ../src/webx_indexed_target.c:201
+msgid "Dithering of transparency"
+msgstr "Tramat de la transparència"
+
+#: ../src/webx_jpeg_target.c:87
+msgid "_Quality"
+msgstr "_Qualitat"
+
+#: ../src/webx_jpeg_target.c:91
+msgid "_Smoothing"
+msgstr "_Suavitzat"
+
+#: ../src/webx_jpeg_target.c:95
+msgid "_Optimize"
+msgstr "_Optimitzat"
+
+#: ../src/webx_jpeg_target.c:99
+msgid "_Progressive"
+msgstr "_Progressiu"
+
+#: ../src/webx_jpeg_target.c:103
+msgid "_Baseline"
+msgstr "Línia _Base"
+
+#: ../src/webx_main.c:68
+msgid "Optimize & save image for web"
+msgstr "Optimitza i desa la imatge per al web"
+
+#: ../src/webx_main.c:73
+msgid "Save for Web..."
+msgstr "Desa per al Web..."
+
+#: ../src/webx_png24_target.c:92
+#: ../src/webx_png8_target.c:93
+msgid "_Compression"
+msgstr "_Compressió"
+
+#: ../src/webx_preview.c:295
+msgid "Show preview"
+msgstr "Mostra una previsualització"
+
+#: ../src/webx_preview.c:335
+msgid "Fit Width"
+msgstr "Ajusta a l'amplada"
+
+#: ../src/webx_preview.c:336
+msgid "Fit Visible"
+msgstr "Ajusta al visible"
+
+#: ../src/webx_resize_widget.c:94
+msgid "Resize"
+msgstr "Canvia la mida"
+
