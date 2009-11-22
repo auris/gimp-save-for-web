@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Save for Web plug-in 0.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-12 09:41+0300\n"
+"PO-Revision-Date: 2007-11-12 09:48+0300\n"
+"Last-Translator: Alexandre Prokoudine <alexandre.prokoudine@gmail.com>\n"
+"Language-Team: GNOME Cyrillic <gnome-cyr@lists.gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\\n\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+
+#: ../src/webx_crop_widget.c:89
+msgid "Crop"
+msgstr "Кадрирование"
+
+#: ../src/webx_crop_widget.c:97
+msgid "X Offset:"
+msgstr "Смещение по X:"
+
+#: ../src/webx_crop_widget.c:112
+msgid "Y Offset:"
+msgstr "Смещение по Y:"
+
+#: ../src/webx_crop_widget.c:127
+#: ../src/webx_resize_widget.c:95
+msgid "Width:"
+msgstr "Ширина:"
+
+#: ../src/webx_crop_widget.c:142
+#: ../src/webx_resize_widget.c:109
+msgid "Height:"
+msgstr "Высота:"
+
+#: ../src/webx_dialog.c:216
+msgid "Save for Web"
+msgstr "Сохранить для веба"
+
+#: ../src/webx_dialog.c:334
+msgid "JPEG"
+msgstr "JPEG"
+
+#: ../src/webx_dialog.c:340
+msgid "JPEG 2000"
+msgstr "JPEG 2000"
+
+#: ../src/webx_dialog.c:346
+msgid "PNG-8"
+msgstr "PNG-8"
+
+#: ../src/webx_dialog.c:352
+msgid "PNG-24"
+msgstr "PNG-24"
+
+#: ../src/webx_dialog.c:358
+msgid "GIF"
+msgstr "GIF"
+
+#: ../src/webx_dialog.c:483
+msgid "Save Image"
+msgstr "Сохранить изображение"
+
+#: ../src/webx_dialog.c:512
+msgid "Failed to save the file!"
+msgstr "Не удалось сохранить файл!"
+
+#: ../src/webx_dialog.c:582
+#: ../src/webx_preview.c:430
+msgid "File size: unknown"
+msgstr "Размер файла: неизвестен"
+
+#: ../src/webx_dialog.c:613
+#: ../src/webx_preview.c:418
+#, c-format
+msgid "File size: %02.01f kB"
+msgstr "Размер файла: %02.01f Кбайт"
+
+#: ../src/webx_gif_target.c:72
+#: ../src/webx_png24_target.c:86
+#: ../src/webx_png8_target.c:87
+msgid "_Interlace"
+msgstr "_Чересстрочность"
+
+#.
+#. * reuse existing
+#.
+#: ../src/webx_indexed_target.c:79
+msgid "Reuse existing palette"
+msgstr "Использовать готовую палитру"
+
+#: ../src/webx_indexed_target.c:96
+msgid "Generate optimum palette"
+msgstr "Создать оптимальную палитру"
+
+#: ../src/webx_indexed_target.c:108
+msgid "Number of colors:"
+msgstr "Количество цветов:"
+
+#: ../src/webx_indexed_target.c:129
+msgid "Use web-optimized palette"
+msgstr "Палитра для веба"
+
+#: ../src/webx_indexed_target.c:146
+msgid "Use black and white palette"
+msgstr "Чёрно-белая палитра"
+
+#: ../src/webx_indexed_target.c:158
+msgid "Remove unused colors"
+msgstr "Убрать неиспользуемые цвета"
+
+#: ../src/webx_indexed_target.c:174
+msgid "Dither:"
+msgstr "Сглаживание переходов:"
+
+#: ../src/webx_indexed_target.c:179
+msgid "None"
+msgstr "Никакого"
+
+#: ../src/webx_indexed_target.c:181
+msgid "Floyd-Steinberg"
+msgstr "Флойда-Штейнберга"
+
+#: ../src/webx_indexed_target.c:183
+msgid "Floyd-Steinberg 2"
+msgstr "Флойда-Штейнберга 2"
+
+#: ../src/webx_indexed_target.c:185
+msgid "Positioned"
+msgstr "Позиционированное"
+
+#: ../src/webx_indexed_target.c:199
+msgid "Dithering of transparency"
+msgstr "Сглаживание переходов полупрозрачности"
+
+#: ../src/webx_jpeg_target.c:87
+msgid "_Quality"
+msgstr "_Качество"
+
+#: ../src/webx_jpeg_target.c:91
+msgid "_Smoothing"
+msgstr "С_глаживание"
+
+#: ../src/webx_jpeg_target.c:95
+msgid "_Optimize"
+msgstr "О_птимизация"
+
+#: ../src/webx_jpeg_target.c:99
+msgid "_Progressive"
+msgstr "Про_грессивное сжатие"
+
+#: ../src/webx_jpeg_target.c:103
+msgid "_Baseline"
+msgstr "_Baseline"
+
+#: ../src/webx_jpeg_target.c:107
+msgid "Strip _EXIF"
+msgstr "_Убрать данные Exif"
+
+#: ../src/webx_main.c:70
+msgid "Optimize & save image for web"
+msgstr "Оптимизировать и сохранить изображение для веба"
+
+#: ../src/webx_main.c:75
+msgid "Save for Web..."
+msgstr "Сохранить для веба..."
+
+#: ../src/webx_main.c:134
+msgid "The image is too large for Save for Web!"
+msgstr "Изображение слишком велико для сохранения с оптимизацией для веба"
+
+#: ../src/webx_png24_target.c:90
+#: ../src/webx_png8_target.c:91
+msgid "_Compression"
+msgstr "С_жатие"
+
+#: ../src/webx_preview.c:314
+msgid "Show preview"
+msgstr "Показать предварительный вариант"
+
+#: ../src/webx_preview.c:361
+msgid "Fit Width"
+msgstr "Уместить по ширине"
+
+#: ../src/webx_preview.c:362
+msgid "Fit Visible"
+msgstr "Уместить целиком"
+
+#: ../src/webx_resize_widget.c:87
+msgid "Resize"
+msgstr "Смена размера"
+

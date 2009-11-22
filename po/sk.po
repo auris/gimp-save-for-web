@@ -1,0 +1,252 @@
+# save-for-web
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Zdenko Podobny <zdpo@mailbox.sk>, 2001.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: save-for-web\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-03-16 19:45+0200\n"
+"PO-Revision-Date: 2001-12-20 17:22GMT+0100\n"
+"Last-Translator: Zdenko Podobný <zdpo@mailbox.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
+
+#: ../src/webx_crop_widget.c:93
+msgid "Crop"
+msgstr ""
+
+#: ../src/webx_crop_widget.c:107
+msgid "X Offset:"
+msgstr ""
+
+#: ../src/webx_crop_widget.c:120
+msgid "Y Offset:"
+msgstr ""
+
+#: ../src/webx_crop_widget.c:133 ../src/webx_resize_widget.c:108
+msgid "Width:"
+msgstr "©írka:"
+
+#: ../src/webx_crop_widget.c:146 ../src/webx_resize_widget.c:120
+msgid "Height:"
+msgstr "Vý¹ka:"
+
+#: ../src/webx_dialog.c:155
+msgid "Save for Web"
+msgstr ""
+
+#: ../src/webx_dialog.c:243 ../src/webx_jpeg_target.c:173
+msgid "JPEG"
+msgstr ""
+
+#: ../src/webx_dialog.c:249
+msgid "JPEG 2000"
+msgstr ""
+
+#: ../src/webx_dialog.c:255 ../src/webx_png8_target.c:141
+msgid "PNG-8"
+msgstr ""
+
+#: ../src/webx_dialog.c:261 ../src/webx_png24_target.c:141
+msgid "PNG-24"
+msgstr ""
+
+#: ../src/webx_dialog.c:267 ../src/webx_gif_target.c:120
+msgid "GIF"
+msgstr ""
+
+#: ../src/webx_dialog.c:368
+msgid "Save Image"
+msgstr ""
+
+#: ../src/webx_dialog.c:398
+msgid "Failed to save the file!"
+msgstr ""
+
+#: ../src/webx_dialog.c:464
+msgid "File size: unknown"
+msgstr ""
+
+#: ../src/webx_dialog.c:509
+#, c-format
+msgid "File size: %02.01f kB"
+msgstr ""
+
+#: ../src/webx_gif_target.c:74 ../src/webx_png24_target.c:88
+#: ../src/webx_png8_target.c:89
+msgid "_Interlace"
+msgstr ""
+
+#.
+#. * reuse existing
+#.
+#: ../src/webx_indexed_target.c:81
+msgid "Reuse existing palette"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:98
+msgid "Generate optimum palette"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:110
+msgid "Number of colors:"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:131
+msgid "Use web-optimized palette"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:148
+msgid "Use black and white palette"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:160
+msgid "Remove unused colors"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:176
+#, fuzzy
+msgid "Dither:"
+msgstr "©írka:"
+
+#: ../src/webx_indexed_target.c:181
+msgid "None"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:183
+msgid "Floyd-Steinberg"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:185
+msgid "Floyd-Steinberg 2"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:187
+msgid "Positioned"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:201
+msgid "Dithering of transparency"
+msgstr ""
+
+#: ../src/webx_jpeg_target.c:87
+msgid "_Quality"
+msgstr ""
+
+#: ../src/webx_jpeg_target.c:91
+msgid "_Smoothing"
+msgstr ""
+
+#: ../src/webx_jpeg_target.c:95
+msgid "_Optimize"
+msgstr ""
+
+#: ../src/webx_jpeg_target.c:99
+msgid "_Progressive"
+msgstr ""
+
+#: ../src/webx_jpeg_target.c:103
+msgid "_Baseline"
+msgstr ""
+
+#: ../src/webx_main.c:68
+msgid "Optimize & save image for web"
+msgstr ""
+
+#: ../src/webx_main.c:73
+msgid "Save for Web..."
+msgstr ""
+
+#: ../src/webx_png24_target.c:92 ../src/webx_png8_target.c:93
+msgid "_Compression"
+msgstr ""
+
+#: ../src/webx_preview.c:295
+msgid "Show preview"
+msgstr ""
+
+#: ../src/webx_preview.c:335
+#, fuzzy
+msgid "Fit Width"
+msgstr "©írka:"
+
+#: ../src/webx_preview.c:336
+msgid "Fit Visible"
+msgstr ""
+
+#: ../src/webx_resize_widget.c:94
+msgid "Resize"
+msgstr ""
+
+#~ msgid "GIMP Plug-In Template"
+#~ msgstr "©ablóna zásuvných modulov GIMP"
+
+#~ msgid "ScaleEntry Examples"
+#~ msgstr "Príklad na veµkos» polo¾ky"
+
+#~ msgid "Dummy 1:"
+#~ msgstr "Figurína 1:"
+
+#~ msgid "Dummy scale entry 1"
+#~ msgstr "Polo¾ka veµkosti figuríny 1"
+
+#~ msgid "Dummy 2:"
+#~ msgstr "Figurína 2"
+
+#~ msgid "Dummy scale entry 2"
+#~ msgstr "Polo¾ka veµkosti figuríny 2"
+
+#~ msgid "Dummy 3:"
+#~ msgstr "Figurína 3:"
+
+#~ msgid "Dummy scale entry 3"
+#~ msgstr "Polo¾ka veµkosti figuríny 3"
+
+#~ msgid "A Random Seed Entry"
+#~ msgstr "Polo¾ka náhodného semena"
+
+#~ msgid ""
+#~ "A GimpCoordinates Widget\n"
+#~ "Initialized with the Drawable's Size"
+#~ msgstr ""
+#~ "Prvok GimpCoordinates\n"
+#~ "Inicializované s veµkos»ou obrázka"
+
+#~ msgid "Image and Drawable Menu Examples"
+#~ msgstr "Príklady obrázkov a kreslených ponúk"
+
+#~ msgid "Layers:"
+#~ msgstr "Vrstvy:"
+
+#~ msgid "RGB Images:"
+#~ msgstr "RGB Obrázky:"
+
+#, fuzzy
+#~ msgid "Plug-In Template..."
+#~ msgstr "©ablóna zásuvných modulov GIMP"
+
+#~ msgid "Pixmap Examples"
+#~ msgstr "Obrázky príkladov"
+
+#~ msgid "Pixmap Buttons:"
+#~ msgstr "Obrázky tlaèítok:"
+
+#~ msgid "With Text"
+#~ msgstr "S textom"
+
+#~ msgid "Plain Pixmap:"
+#~ msgstr "Èistý obrázok:"
+
+#, fuzzy
+#~ msgid "<Image>/Filters/Misc/Plug-In Template..."
+#~ msgstr "<Image>/Filters/Misc/PlugIn Template..."
+
+#~ msgid "OK"
+#~ msgstr "Ok"
+
+#~ msgid "Cancel"
+#~ msgstr "Zru¹i»"

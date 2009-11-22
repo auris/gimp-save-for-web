@@ -1,0 +1,13 @@
+# List of source files containing translatable strings.
+
+src/webx_crop_widget.c
+src/webx_dialog.c
+src/webx_gif_target.c
+src/webx_indexed_target.c
+src/webx_jpeg_target.c
+src/webx_main.c
+src/webx_png24_target.c
+src/webx_png8_target.c
+src/webx_preview.c
+src/webx_resize_widget.c
+src/webx_prefs.c

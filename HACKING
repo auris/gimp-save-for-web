@@ -1,0 +1,29 @@
+If you want to hack a gimp plugin based on the save-for-web package,
+it will make you life easier to have the following packages installed:
+
+	- GNU autoconf >= 2.54
+	- GNU automake >= 1.7
+
+These should be available by ftp from prep.ai.mit.edu or any of the
+fine GNU mirrors.  Beta software can be found at alpha.gnu.org.
+
+If you are accessing save-for-web via CVS, then you will need
+to take several steps to get it to compile.  You can do all these steps
+at once by running:
+
+	./autogen.sh
+
+Basically this does the following for you:
+
+	aclocal; automake; autoconf
+
+	The above commands create the "configure" script.  Now you
+	can run the configure script to create all the Makefiles.
+
+Before running autogen.sh or configure, make sure you have libtool in
+your path. Also make sure gimp-2.0.m4 is in the same --prefix relative
+to your automake installation.
+
+Note that autogen.sh runs configure for you.  If you wish to pass
+options like --prefix=/usr to configure you can give those options
+to autogen.sh and they will be passed on to configure.

@@ -1,0 +1,14 @@
+Save for Web plug-in for The GIMP
+=====================
+
+Save for Web plug-ins allows to experiment with various popular web format
+options. It shows an automatically updated preview and file size statistics.
+
+To build and install it, just ...
+
+	./configure
+	make
+	make install
+
+ ... and it's there.
+

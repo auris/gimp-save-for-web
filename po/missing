@@ -1,0 +1,10 @@
+save-for-web-0.15.0/src/webx_crop_widget.c
+save-for-web-0.15.0/src/webx_dialog.c
+save-for-web-0.15.0/src/webx_gif_target.c
+save-for-web-0.15.0/src/webx_indexed_target.c
+save-for-web-0.15.0/src/webx_jpeg_target.c
+save-for-web-0.15.0/src/webx_main.c
+save-for-web-0.15.0/src/webx_png24_target.c
+save-for-web-0.15.0/src/webx_png8_target.c
+save-for-web-0.15.0/src/webx_preview.c
+save-for-web-0.15.0/src/webx_resize_widget.c
