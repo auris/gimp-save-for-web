@@ -8,26 +8,63 @@
 # tools and you shouldn't use this script.  Just call ./configure
 # directly.
 
-PROJECT="GIMP Plug-In Template"
-TEST_TYPE=-f
-FILE=src/webx_main.c
+ACLOCAL=${ACLOCAL-aclocal-1.9}
+AUTOCONF=${AUTOCONF-autoconf}
+AUTOHEADER=${AUTOHEADER-autoheader}
+AUTOMAKE=${AUTOMAKE-automake-1.9}
+LIBTOOLIZE=${LIBTOOLIZE-libtoolize}
 
 AUTOCONF_REQUIRED_VERSION=2.54
-AUTOMAKE_REQUIRED_VERSION=1.6
-GLIB_REQUIRED_VERSION=2.0.0
-INTLTOOL_REQUIRED_VERSION=0.17
+AUTOMAKE_REQUIRED_VERSION=1.9.6
+INTLTOOL_REQUIRED_VERSION=0.36.3
+LIBTOOL_REQUIRED_VERSION=1.5
+
+
+PROJECT="GIMP Save for Web plug-in"
+TEST_TYPE=-f
+FILE=src/webx_main.c
 
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 ORIGDIR=`pwd`
 cd $srcdir
 
+
 check_version ()
 {
-    if expr $1 \>= $2 > /dev/null; then
-	echo "yes (version $1)"
+    VERSION_A=$1
+    VERSION_B=$2
+
+    save_ifs="$IFS"
+    IFS=.
+    set dummy $VERSION_A 0 0 0
+    MAJOR_A=$2
+    MINOR_A=$3
+    MICRO_A=$4
+    set dummy $VERSION_B 0 0 0
+    MAJOR_B=$2
+    MINOR_B=$3
+    MICRO_B=$4
+    IFS="$save_ifs"
+
+    if expr "$MAJOR_A" = "$MAJOR_B" > /dev/null; then
+        if expr "$MINOR_A" \> "$MINOR_B" > /dev/null; then
+           echo "yes (version $VERSION_A)"
+        elif expr "$MINOR_A" = "$MINOR_B" > /dev/null; then
+            if expr "$MICRO_A" \>= "$MICRO_B" > /dev/null; then
+               echo "yes (version $VERSION_A)"
+            else
+                echo "Too old (version $VERSION_A)"
+                DIE=1
+            fi
+        else
+            echo "Too old (version $VERSION_A)"
+            DIE=1
+        fi
+    elif expr "$MAJOR_A" \> "$MAJOR_B" > /dev/null; then
+	echo "Major version might be too new ($VERSION_A)"
     else
-	echo "Too old (found version $1)!"
+	echo "Too old (version $VERSION_A)"
 	DIE=1
     fi
 }
@@ -39,37 +76,46 @@ echo
 
 DIE=0
 
-echo -n "checking for autoconf >= $AUTOCONF_REQUIRED_VERSION ... "
-if (autoconf --version) < /dev/null > /dev/null 2>&1; then
-    VER=`autoconf --version \
-         | grep -iw autoconf | sed "s/.* \([0-9.]*\)[-a-z0-9]*$/\1/"`
-    check_version $VER $AUTOCONF_REQUIRED_VERSION
+echo -n "checking for libtool >= $LIBTOOL_REQUIRED_VERSION ... "
+if ($LIBTOOLIZE --version) < /dev/null > /dev/null 2>&1; then
+   LIBTOOLIZE=$LIBTOOLIZE
+elif (glibtoolize --version) < /dev/null > /dev/null 2>&1; then
+   LIBTOOLIZE=glibtoolize
 else
     echo
-    echo "  You must have autoconf installed to compile $PROJECT."
-    echo "  Download the appropriate package for your distribution,"
+    echo "  You must have libtool installed to compile $PROJECT."
+    echo "  Install the appropriate package for your distribution,"
     echo "  or get the source tarball at ftp://ftp.gnu.org/pub/gnu/"
-    DIE=1;
+    echo
+    DIE=1
 fi
 
+if test x$LIBTOOLIZE != x; then
+    VER=`$LIBTOOLIZE --version \
+         | grep libtool | sed "s/.* \([0-9.]*\)[-a-z0-9]*$/\1/"`
+    check_version $VER $LIBTOOL_REQUIRED_VERSION
+fi
+
+
 echo -n "checking for automake >= $AUTOMAKE_REQUIRED_VERSION ... "
-if (automake-1.7 --version) < /dev/null > /dev/null 2>&1; then
-   AUTOMAKE=automake-1.7
-   ACLOCAL=aclocal-1.7
-elif (automake-1.8 --version) < /dev/null > /dev/null 2>&1; then
-   AUTOMAKE=automake-1.8
-   ACLOCAL=aclocal-1.8
+if ($AUTOMAKE --version) < /dev/null > /dev/null 2>&1; then
+   AUTOMAKE=$AUTOMAKE
+   ACLOCAL=$ACLOCAL
+elif (automake-1.11 --version) < /dev/null > /dev/null 2>&1; then
+   AUTOMAKE=automake-1.11
+   ACLOCAL=aclocal-1.11
+elif (automake-1.10 --version) < /dev/null > /dev/null 2>&1; then
+   AUTOMAKE=automake-1.10
+   ACLOCAL=aclocal-1.10
 elif (automake-1.9 --version) < /dev/null > /dev/null 2>&1; then
    AUTOMAKE=automake-1.9
    ACLOCAL=aclocal-1.9
-elif (automake-1.6 --version) < /dev/null > /dev/null 2>&1; then
-   AUTOMAKE=automake-1.6
-   ACLOCAL=aclocal-1.6
 else
     echo
-    echo "  You must have automake 1.6 or newer installed to compile $PROJECT."
+    echo "  You must have automake $AUTOMAKE_REQUIRED_VERSION or newer installed to compile $PROJECT."
     echo "  Download the appropriate package for your distribution,"
     echo "  or get the source tarball at ftp://ftp.gnu.org/pub/gnu/automake/"
+    echo
     DIE=1
 fi
 
@@ -77,19 +123,6 @@ if test x$AUTOMAKE != x; then
     VER=`$AUTOMAKE --version \
          | grep automake | sed "s/.* \([0-9.]*\)[-a-z0-9]*$/\1/"`
     check_version $VER $AUTOMAKE_REQUIRED_VERSION
-fi
-
-echo -n "checking for glib-gettextize >= $GLIB_REQUIRED_VERSION ... "
-if (glib-gettextize --version) < /dev/null > /dev/null 2>&1; then
-    VER=`glib-gettextize --version \
-         | grep glib-gettextize | sed "s/.* \([0-9.]*\)/\1/"`
-    check_version $VER $GLIB_REQUIRED_VERSION
-else
-    echo
-    echo "  You must have glib-gettextize installed to compile $PROJECT."
-    echo "  glib-gettextize is part of glib-2.0, so you should already"
-    echo "  have it. Make sure it is in your PATH."
-    DIE=1
 fi
 
 echo -n "checking for intltool >= $INTLTOOL_REQUIRED_VERSION ... "
@@ -102,6 +135,7 @@ else
     echo "  You must have intltool installed to compile $PROJECT."
     echo "  Get the latest version from"
     echo "  ftp://ftp.gnome.org/pub/GNOME/sources/intltool/"
+    echo
     DIE=1
 fi
 
@@ -154,6 +188,8 @@ if test -z "$ACLOCAL_FLAGS"; then
     done
 fi
 
+rm -rf autom4te.cache
+
 $ACLOCAL $ACLOCAL_FLAGS
 RC=$?
 if test $RC -ne 0; then
@@ -162,13 +198,12 @@ if test $RC -ne 0; then
 fi
 
 # optionally feature autoheader
-(autoheader --version)  < /dev/null > /dev/null 2>&1 && autoheader || exit 1
+($AUTOHEADER --version)  < /dev/null > /dev/null 2>&1 && $AUTOHEADER || exit 1
 
 $AUTOMAKE --add-missing || exit 1
-autoconf || exit 1
+$AUTOCONF || exit $?
 
-glib-gettextize --copy --force || exit 1
-intltoolize --copy --force --automake || exit 1
+intltoolize --automake || exit 1
 
 cd $ORIGDIR
 
