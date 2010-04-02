@@ -1,0 +1,202 @@
+# This is the Japanese locale definition for the GIMP Plug-In Template.
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Michael Natterer <mitch@gimp.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: save-for-web 0.29.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-04-03 00:15+0900\n"
+"PO-Revision-Date: 2010-04-03 00:41+0900\n"
+"Last-Translator: Yoshinori Yamakawa <yamma-ma@users.sourceforge.jp>\n"
+"Language-Team: Japanese <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+
+#: ../src/webx_crop_widget.c:87
+msgid "Crop"
+msgstr "トリミング"
+
+#: ../src/webx_crop_widget.c:95
+msgid "X Offset:"
+msgstr "Xオフセット："
+
+#: ../src/webx_crop_widget.c:110
+msgid "Y Offset:"
+msgstr "Yオフセット："
+
+#: ../src/webx_crop_widget.c:125
+#: ../src/webx_resize_widget.c:95
+msgid "Width:"
+msgstr "幅："
+
+#: ../src/webx_crop_widget.c:140
+#: ../src/webx_resize_widget.c:109
+msgid "Height:"
+msgstr "高さ："
+
+#: ../src/webx_dialog.c:216
+msgid "Save for Web"
+msgstr "Web用に保存"
+
+#: ../src/webx_dialog.c:334
+msgid "JPEG"
+msgstr ""
+
+#: ../src/webx_dialog.c:340
+msgid "JPEG 2000"
+msgstr ""
+
+#: ../src/webx_dialog.c:346
+msgid "PNG-8"
+msgstr ""
+
+#: ../src/webx_dialog.c:352
+msgid "PNG-24"
+msgstr ""
+
+#: ../src/webx_dialog.c:358
+msgid "GIF"
+msgstr ""
+
+#: ../src/webx_dialog.c:480
+msgid "Save Image"
+msgstr "画像を保存"
+
+#: ../src/webx_dialog.c:509
+msgid "Failed to save the file!"
+msgstr "ファイルへの保存に失敗しました！"
+
+#: ../src/webx_dialog.c:579
+#: ../src/webx_preview.c:430
+msgid "File size: unknown"
+msgstr "ファイルサイズ：不明"
+
+#: ../src/webx_dialog.c:610
+#: ../src/webx_preview.c:418
+#, c-format
+msgid "File size: %02.01f kB"
+msgstr "ファイルサイズ：%02.01f kB"
+
+#: ../src/webx_gif_target.c:72
+#: ../src/webx_png24_target.c:86
+#: ../src/webx_png8_target.c:87
+msgid "_Interlace"
+msgstr "インターレース(_I)"
+
+#.
+#. * reuse existing
+#.
+#: ../src/webx_indexed_target.c:79
+msgid "Reuse existing palette"
+msgstr "既存のパレットを使用"
+
+#: ../src/webx_indexed_target.c:96
+msgid "Generate optimum palette"
+msgstr "最適化されたパレットを生成"
+
+#: ../src/webx_indexed_target.c:108
+msgid "Number of colors:"
+msgstr "色数："
+
+#: ../src/webx_indexed_target.c:129
+msgid "Use web-optimized palette"
+msgstr "Webカラーパレットを使用"
+
+#: ../src/webx_indexed_target.c:146
+msgid "Use black and white palette"
+msgstr "白黒2値のパレットを使用"
+
+#: ../src/webx_indexed_target.c:158
+msgid "Remove unused colors"
+msgstr "未使用のカラーを削除"
+
+#: ../src/webx_indexed_target.c:174
+msgid "Dither:"
+msgstr "ディザ："
+
+#: ../src/webx_indexed_target.c:179
+msgid "None"
+msgstr "なし"
+
+#: ../src/webx_indexed_target.c:181
+msgid "Floyd-Steinberg"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:183
+msgid "Floyd-Steinberg 2"
+msgstr ""
+
+#: ../src/webx_indexed_target.c:185
+msgid "Positioned"
+msgstr "パターン"
+
+#: ../src/webx_indexed_target.c:199
+msgid "Dithering of transparency"
+msgstr "半透明部分をディザ処理"
+
+#: ../src/webx_jpeg_target.c:87
+msgid "_Quality"
+msgstr "品質(_Q)"
+
+#: ../src/webx_jpeg_target.c:91
+msgid "_Smoothing"
+msgstr "スムージング(_S)"
+
+#: ../src/webx_jpeg_target.c:95
+msgid "_Optimize"
+msgstr "最適化(_O)"
+
+#: ../src/webx_jpeg_target.c:99
+msgid "_Progressive"
+msgstr "プログレッシブ(_P)"
+
+#: ../src/webx_jpeg_target.c:103
+msgid "_Baseline"
+msgstr "ベースライン(_B)"
+
+#: ../src/webx_jpeg_target.c:107
+msgid "Strip _EXIF"
+msgstr "_EXIF情報を削除"
+
+#: ../src/webx_main.c:70
+msgid "Optimize & save image for web"
+msgstr "Web向けに最適化して画像を保存します"
+
+#: ../src/webx_main.c:75
+msgid "Save for Web..."
+msgstr "Web用に保存..."
+
+#: ../src/webx_main.c:134
+msgid "The image is too large for Save for Web!"
+msgstr "Web用に使用するには画像が大きすぎます！"
+
+#: ../src/webx_png24_target.c:90
+#: ../src/webx_png8_target.c:91
+msgid "_Compression"
+msgstr "圧縮レベル(_C)"
+
+#: ../src/webx_preview.c:314
+msgid "Show preview"
+msgstr "プレビュー"
+
+#: ../src/webx_preview.c:361
+msgid "Fit Width"
+msgstr "幅に合わせる"
+
+#: ../src/webx_preview.c:362
+msgid "Fit Visible"
+msgstr "全体表示"
+
+#: ../src/webx_resize_widget.c:87
+msgid "Resize"
+msgstr "拡大縮小"
+
+#: ../src/webx_prefs.c:124
+#, c-format
+msgid "Couldn't save resource file: %s"
+msgstr "設定ファイルを保存できません：%s"
+

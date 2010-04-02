@@ -8,7 +8,7 @@ m4_define([plugin_name], [gimp-save-for-web])
 dnl These three define the plug-in version number
 m4_define([plugin_major_version], [0])
 m4_define([plugin_minor_version], [29])
-m4_define([plugin_micro_version], [0])
+m4_define([plugin_micro_version], [1])
 
 m4_define([plugin_version],
           [plugin_major_version.plugin_minor_version.plugin_micro_version])
@@ -16,7 +16,7 @@ m4_define([plugin_version],
 AC_INIT([plugin_name], [plugin_version])
 
 AC_DEFINE(PLUGIN_NAME, PACKAGE_NAME, [Save for Web])
-AC_DEFINE(PLUGIN_VERSION, PACKAGE_VERSION, [0.29.0])
+AC_DEFINE(PLUGIN_VERSION, PACKAGE_VERSION, [0.29.1])
 
 AC_DEFINE(PLUGIN_MAJOR_VERSION, plugin_major_version, [Plug-In major version])
 AC_DEFINE(PLUGIN_MINOR_VERSION, plugin_minor_version, [Plug-In minor version])
@@ -152,7 +152,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
 				    [The gettext translation domain.])
 
 dnl Add the languages which your application supports here.
-ALL_LINGUAS="ca es fr it ko ru sk sv"
+ALL_LINGUAS="ca es fr ja it ko ru sk sv"
 
 AC_PROG_INTLTOOL
 AM_GLIB_GNU_GETTEXT
