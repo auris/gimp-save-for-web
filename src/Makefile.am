@@ -60,4 +60,5 @@ LDADD = \
 	$(GIMP_LIBS)		\
 	$(GTK_LIBS)		\
 	$(RT_LIBS)		\
-	$(INTLLIBS)
+	$(INTLLIBS)		\
+	$(LIBM)
