@@ -21,7 +21,7 @@
 #ifndef __WEBX_DIALOG_H__
 #define __WEBX_DIALOG_H__
 
-#include <libgimpwidgets/gimpdialog.h>
+#include <libgimpwidgets/gimpwidgets.h>
 
 G_BEGIN_DECLS
 
