@@ -12,3 +12,5 @@ To build and install it, just ...
 
  ... and it's there.
 
+If building from a GIT clone, you'll need to run ./autogen.sh first (see the HACKING file)
+
