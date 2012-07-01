@@ -67,18 +67,18 @@ query (void)
   gimp_plugin_domain_register (GETTEXT_PACKAGE, LOCALEDIR);
 
   gimp_install_procedure (PLUG_IN_PROC,
-                          N_("Optimize & save image for web"),
+                          N_("Optimize & export image for web"),
                           "Optimize image for web.",
                           "Aurimas Juška",
                           "Aurimas Juška",
                           "0.25",
-                          N_("Save for Web..."),
+                          N_("Export for We_b..."),
                           "RGB*, GRAY*, INDEXED*",
                           GIMP_PLUGIN,
                           G_N_ELEMENTS (args), 0,
                           args, NULL);
 
-  gimp_plugin_menu_register (PLUG_IN_PROC, "<Image>/File/Save");
+  gimp_plugin_menu_register (PLUG_IN_PROC, "<Image>/File/Export");
 }
 
 static void
@@ -131,7 +131,7 @@ webx_run (gint32 image_ID, gint32 drawable_ID)
   if (gimp_image_width (image_ID) > WEBX_MAX_SIZE
       || gimp_image_height (image_ID) > WEBX_MAX_SIZE)
     {
-      gimp_message (_("The image is too large for Save for Web!"));
+      gimp_message (_("The image is too large for the Export for Web plug-in!"));
       return;
     }
 
