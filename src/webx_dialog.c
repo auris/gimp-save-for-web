@@ -213,7 +213,7 @@ webx_dialog_new (gint image_ID,
   webx_prefs_load (&webx_prefs);
 
   dlg = g_object_new (WEBX_TYPE_DIALOG,
-                      "title",     (gchar*)_("Save for Web"),
+                      "title",     (gchar*)_("Export for Web"),
                       "role",      (gchar*)PLUG_IN_BINARY,
                       "modal",     (GtkDialogFlags)GTK_DIALOG_MODAL,
                       "help-func", (GimpHelpFunc)gimp_standard_help_func,
@@ -222,7 +222,7 @@ webx_dialog_new (gint image_ID,
   gimp_dialog_add_buttons (GIMP_DIALOG (dlg),
 
                            GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                           GTK_STOCK_SAVE,   GTK_RESPONSE_OK,
+                           _("_Export"), GTK_RESPONSE_OK,
 
                            NULL);
   gtk_dialog_set_alternative_button_order (GTK_DIALOG (dlg),
@@ -477,12 +477,12 @@ webx_dialog_save_dialog (WebxDialog       *dlg)
   gint        source_image;
   gboolean    saved = FALSE;
 
-  save_dlg = gtk_file_chooser_dialog_new (_("Save Image"),
+  save_dlg = gtk_file_chooser_dialog_new (_("Export Image"),
                                           GTK_WINDOW (dlg),
                                           GTK_FILE_CHOOSER_ACTION_SAVE,
 
                                           GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                                          GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT,
+                                          _("_Export"), GTK_RESPONSE_ACCEPT,
 
                                           NULL);
   gtk_dialog_set_alternative_button_order (GTK_DIALOG (save_dlg),
@@ -506,7 +506,7 @@ webx_dialog_save_dialog (WebxDialog       *dlg)
       filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (save_dlg));
       saved = webx_pipeline_save_image (WEBX_PIPELINE (dlg->pipeline), filename);
       if (! saved)
-        g_message (_("Failed to save the file!")); 
+        g_message (_("Failed to export the file!")); 
       g_free (filename);
     }
 
