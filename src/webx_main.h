@@ -23,7 +23,7 @@
 
 #define RESPONSE_RESET           1
 
-#define WEBX_MAX_SIZE            (2048*2)
+#define WEBX_MAX_SIZE            (10000)
 
 extern gint     global_image_ID;
 extern gint     global_drawable_ID;
