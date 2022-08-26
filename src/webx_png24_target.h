@@ -48,9 +48,11 @@ struct _WebxPng24Target
   gint          time;
   gint          comment;
   gint          svtrans;
+  gint          posterize;
 
   GtkObject    *interlace_o;
   GtkObject    *compression_o;
+  GtkObject    *posterize_o;
 };
 
 struct _WebxPng24TargetClass
