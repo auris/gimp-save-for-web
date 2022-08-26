@@ -70,6 +70,7 @@ webx_png24_target_init (WebxPng24Target *png24)
   png24->time         = return_vals[7].data.d_int32;
   png24->comment      = return_vals[8].data.d_int32;
   png24->svtrans      = return_vals[9].data.d_int32;
+  png24->posterize    = 255;
   gimp_destroy_params (return_vals, n_return_vals);
 }
 
@@ -89,6 +90,10 @@ webx_png24_target_new (void)
                                                row++,
                                                _("_Compression"), 0, 9,
                                                &png24->compression);
+  png24->posterize_o = webx_range_entry_new (WEBX_TARGET (png24),
+                                             row++,
+                                             _("_Posterize"), 2, 255,
+                                             &png24->posterize);
 
   return GTK_WIDGET (png24);
 }
@@ -101,18 +106,24 @@ webx_png24_target_save_image (WebxTarget       *widget,
   WebxPng24Target *png24;
   GimpParam       *return_vals;
   gint             n_return_vals;
-  gint            image;
-  gint            layer;
-  gboolean        save_res;
+  gint             image_id;
+  gint             layer_id;
+  gboolean         save_res;
+  GimpDrawable    *drawable;
 
   png24 = WEBX_PNG24_TARGET (widget);
-  image = input->rgb_image;
-  layer = input->rgb_layer;
+  image_id = input->rgb_image;
+  layer_id = input->rgb_layer;
+
+  image_id = gimp_image_duplicate (image_id);
+  layer_id = gimp_image_flatten (image_id);
+  drawable = gimp_drawable_get (layer_id);
+  gimp_drawable_posterize(layer_id, png24->posterize);
 
   return_vals = gimp_run_procedure ("file-png-save", &n_return_vals,
                                     GIMP_PDB_INT32, GIMP_RUN_NONINTERACTIVE,
-                                    GIMP_PDB_IMAGE, image,
-                                    GIMP_PDB_DRAWABLE, layer,
+                                    GIMP_PDB_IMAGE, image_id,
+                                    GIMP_PDB_DRAWABLE, layer_id,
                                     GIMP_PDB_STRING, file_name,
                                     GIMP_PDB_STRING, file_name,
                                     GIMP_PDB_INT32, png24->interlace,
@@ -123,12 +134,14 @@ webx_png24_target_save_image (WebxTarget       *widget,
                                     GIMP_PDB_INT32, png24->phys,
                                     GIMP_PDB_INT32, png24->time,
                                     GIMP_PDB_END);
+
   if (return_vals[0].data.d_int32 == GIMP_PDB_SUCCESS)
     save_res = TRUE;
   else
     save_res = FALSE;
   gimp_destroy_params (return_vals, n_return_vals);
 
+  gimp_drawable_detach(drawable);
 
   return save_res;
 }
